@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Card</title>
+    <style>
+        body {
+            display: flexbox;
+            justify-items: center;
+        }
+
+        .cards {
+            margin: 0 auto;
+        }
+
+        .card {
+            width: 80%;
+            height: fit-content;
+            box-shadow: 2px 2px 2px 4px black;
+            border: 1px black;
+        }
+
+        @media screen and (max-width:500px) {
+            .cards {
+                flex-wrap: wrap;
+                margin: 10px auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <div class="d-flex flex-row cards">
+
+        <div class="card">
+            <h2 class="card-title">Card</h2>
+            <div class="card-body">Body</div>
+            <p class="card-footer">Footer</p>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Card</h2>
+            <div class="card-body">Body</div>
+            <p class="card-footer">Footer</p>
+        </div>
+    </div>
+</body>
+
+</html>
