@@ -94,7 +94,9 @@
             <form action="" method="get" class="card-body text-end">
                 <!-- name: text field -->
                 <div class="mb-3 row">
-                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <label for="name" class="col-sm-2 col-form-label">Name
+                        <span class="text-danger">*</span>
+                    </label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="name" name="name" value="<?= $name; ?>"
                             placeholder="John Doe" />
@@ -103,7 +105,9 @@
 
                 <!-- email: email field -->
                 <div class="mb-3 row">
-                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <label for="email" class="col-sm-2 col-form-label">Email
+                        <span class="text-danger">*</span>
+                    </label>
                     <div class="col-sm-10">
                         <input type="email" class="form-control" id="email" name="email" value="<?= $email; ?>"
                             placeholder="email@example.com" />
@@ -112,7 +116,9 @@
 
                 <!-- location: select from list-->
                 <div class="mb-3 row">
-                    <label for="location" class="col-sm-2 col-form-label">Location</label>
+                    <label for="location" class="col-sm-2 col-form-label">Location
+                        <span class="text-danger">*</span>
+                    </label>
                     <div class="col-sm-10">
                         <select class="form-select" id="location" name="location" aria-label="select-location">
                             <!-- this first option is dummy -->
@@ -133,7 +139,9 @@
 
                 <!-- date: date field -->
                 <div class="mb-3 row">
-                    <label for="trip-date" class="col-sm-2 col-form-label">Trip Date</label>
+                    <label for="trip-date" class="col-sm-2 col-form-label">Trip Date
+                        <span class="text-danger">*</span>
+                    </label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control" id="trip-date" name="trip-date"
                             value="<?= $tripDate; ?>" />
@@ -142,9 +150,14 @@
 
                 <!-- comments: text area -->
                 <div class="mb-3 row">
-                    <label for="comments" class="col-sm-2 col-form-label">Comments</label>
+                    <label for="comments" class="col-sm-2 col-form-label">Comments
+                        <span class="text-danger"></span>
+                    </label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="comments" name="comments"><?= trim($comments); ?></textarea>
+                        <textarea class="form-control" id="comments" name="comments"><?php
+                        foreach (explode("\n", $comments) as $comment) {
+                            print($comment);
+                        } ?></textarea>
                     </div>
                 </div>
 

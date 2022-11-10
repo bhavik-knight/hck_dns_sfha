@@ -1,9 +1,9 @@
 <?php
-$name = htmlspecialchars($_GET["name"] ?? "", ENT_QUOTES);
-$email = htmlspecialchars($_GET["email"] ?? "", ENT_QUOTES);
-$location = htmlspecialchars($_GET["location"] ?? "", ENT_QUOTES);
-$tripDate = htmlspecialchars($_GET["trip-date"] ?? "", ENT_QUOTES);
-$comments = htmlspecialchars($_GET["comments"] ?? "", ENT_QUOTES);
+$name = trim(htmlspecialchars($_GET["name"] ?? "", ENT_QUOTES));
+$email = trim(htmlspecialchars($_GET["email"] ?? "", ENT_QUOTES));
+$location = trim(htmlspecialchars($_GET["location"] ?? "", ENT_QUOTES));
+$tripDate = trim(htmlspecialchars($_GET["trip-date"] ?? "", ENT_QUOTES));
+$comments = trim(htmlspecialchars($_GET["comments"] ?? "", ENT_QUOTES));
 ?>
 
 <main class="main-container d-flex">
@@ -35,7 +35,9 @@ $comments = htmlspecialchars($_GET["comments"] ?? "", ENT_QUOTES);
                     </dd>
                     <dt class="col-sm-6">Comments:</dt>
                     <dd class="col-sm-6">
-                        <?= $comments ?>
+                        <?php foreach (explode("\n", $comments) as $comment) {
+                            print($comment . ", ");
+                        } ?>
                     </dd>
                 </dl>
             </div>
