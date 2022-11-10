@@ -76,6 +76,7 @@ function darkMode(isTrue) {
         $("body").addClass("bg-dark text-white");
         $(".card").addClass("bg-dark text-white border-white");
         $("#events h3").css({ "color": "cyan" });
+        $("dl").css({ "border": "1px solid white" })
         $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6").addClass("border-white");
         $("header, footer").css({
             "box-shadow": "1px 1px 4px white"
@@ -86,7 +87,7 @@ function darkMode(isTrue) {
                 "padding": 0,
                 "margin": 0
             });
-        $("#events, #hamburger-menu, .bg-img-container, .page")
+        $("#hamburger-menu, .bg-img-container, .page")
             .css({
                 "border": "2px solid white",
                 "box-shadow": "2px 2px 8px white"
@@ -97,6 +98,7 @@ function darkMode(isTrue) {
         $("#hamburger-menu").removeClass("bg-dark");
         $("body").removeClass("bg-dark text-white");
         $(".card").removeClass("bg-dark text-white border-white");
+        $("dl").css({ "border": "1px solid black" });
         $("#events h3").css({ "color": "green" });
         $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6")
             .removeClass("border-white")
@@ -110,7 +112,7 @@ function darkMode(isTrue) {
                 "padding": 0,
                 "margin": 0
             });
-        $("#events,#hamburger-menu, .bg-img-container, .page")
+        $("#hamburger-menu, .bg-img-container, .page")
             .css({
                 "border": "2px solid black",
                 "box-shadow": "2px 2px 8px black"

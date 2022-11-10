@@ -120,6 +120,18 @@ footer .social .btn:hover {
 
 
 /* start of main styles */
+dl {
+    border-radius: 1em;
+}
+
+dt {
+    text-align: right;
+}
+
+dd {
+    text-align: left;
+}
+
 #hamburger-menu ul {
     display: none;
     margin: 4px;
@@ -170,7 +182,6 @@ footer .social .btn:hover {
 }
 
 #events {
-    width: 1000px;
     border-radius: 1em;
     box-shadow: 2px 2px 8px black;
 }
@@ -182,7 +193,6 @@ footer .social .btn:hover {
 #events h5,
 #events h6 {
     border-bottom: 2px solid black;
-    width: fit-content;
 }
 
 .card {
@@ -212,10 +222,6 @@ footer .social .btn:hover {
     margin: 10px;
     padding: 10px;
     box-shadow: 2px 2px 8x black;
-}
-
-.thank-you-detail dt {
-    text-align: right;
 }
 
 .canoe-info .img-container,
