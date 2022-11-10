@@ -31,7 +31,7 @@
 </header>
 
 <!-- this will display on clicking hamburger menu -->
-<div id="hamburger-menu" class="hamburger-menu-items hidden">
+<div id="hamburger-menu" class="hamburger-menu-items hidden rounded">
     <ul class="list-group">
         <a href="index.php?q=menu.php" class="list-group-items btn">Menu</a>
         <a href="index.php?q=book.php" class="list-group-items btn">Book Trip</a>
