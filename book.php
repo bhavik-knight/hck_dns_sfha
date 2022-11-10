@@ -122,16 +122,24 @@
                     <div class="col-sm-10">
                         <select class="form-select" id="location" name="location" aria-label="select-location">
                             <!-- this first option is dummy -->
-                            <option selected disabled value="" <?php if ($location==="" ) { echo " selected" ; } ?>>
+                            <option selected disabled value="" <?php if ($location === "") {
+                                echo " selected";
+                            } ?>>
                                 Choose
                                 Location </option>
-                            <option value="Halifax" <?php if ($location==="Halifax" ) { echo " selected" ; } ?>>
+                            <option value="Halifax" <?php if ($location === "Halifax") {
+                                echo " selected";
+                            } ?>>
                                 Halifax
                             </option>
-                            <option value="Sydney" <?php if ($location==="Sydney" ) { echo " selected" ; } ?>>
+                            <option value="Sydney" <?php if ($location === "Sydney") {
+                                echo " selected";
+                            } ?>>
                                 Sydney
                             </option>
-                            <option value="Antigonish" <?php if ($location=="Antigonish" ) { echo " selected" ; } ?>>
+                            <option value="Antigonish" <?php if ($location == "Antigonish") {
+                                echo " selected";
+                            } ?>>
                                 Antigonish</option>
                         </select>
                     </div>
@@ -154,7 +162,7 @@
                         <span class="text-danger"></span>
                     </label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="comments" name="comments"><?php
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Any suggestions?"><?php
                         foreach (explode("\n", $comments) as $comment) {
                             print($comment);
                         } ?></textarea>
