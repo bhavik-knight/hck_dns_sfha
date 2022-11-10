@@ -1,4 +1,9 @@
 $(function () {
+    // click on paddle to get to home page
+    $("#home-btn").click(function () {
+        window.open("index.php", "_blank noreferrer noopener");
+    });
+
     // check switch for dark-mode, and pass it to the darkMode function
     darkMode($("#dark-mode-switch:checked").val());
 
@@ -10,6 +15,7 @@ $(function () {
             darkMode(false);
         }
     });
+
 
     // turn events places heading green
     $("#events h3").css({ "color": "green" });
@@ -30,7 +36,7 @@ $(function () {
     // toggle side navigation through hamburger menu
     $("#hamburger-menu ul").toggle();
     $("#navbar-menu-btn").click(function () {
-        $("#hamburger-menu  ul").toggle();
+        $("#hamburger-menu ul").toggle();
     });
 
     // give social media buttons in the footer a title
@@ -70,7 +76,7 @@ function darkMode(isTrue) {
         $("body").addClass("bg-dark text-white");
         $(".card").addClass("bg-dark text-white border-white");
         $("#events h3").css({ "color": "cyan" });
-        $("#events h1, h2, h3, h4, h5, h6").addClass("border-white");
+        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6").addClass("border-white");
         $("header, footer").css({
             "box-shadow": "1px 1px 4px white"
         })
@@ -80,7 +86,7 @@ function darkMode(isTrue) {
                 "padding": 0,
                 "margin": 0
             });
-        $("#events, .bg-img-container, #hamburger-menu")
+        $("#events, #hamburger-menu, .bg-img-container, .page")
             .css({
                 "border": "2px solid white",
                 "box-shadow": "2px 2px 8px white"
@@ -92,7 +98,7 @@ function darkMode(isTrue) {
         $("body").removeClass("bg-dark text-white");
         $(".card").removeClass("bg-dark text-white border-white");
         $("#events h3").css({ "color": "green" });
-        $("#events h1, h2, h3, h4, h5, h6")
+        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6")
             .removeClass("border-white")
             .css({
                 "border-bottom": "2px solid black",
@@ -104,7 +110,7 @@ function darkMode(isTrue) {
                 "padding": 0,
                 "margin": 0
             });
-        $("#events, #hamburger-menu, .bg-img-container")
+        $("#events,#hamburger-menu, .bg-img-container, .page")
             .css({
                 "border": "2px solid black",
                 "box-shadow": "2px 2px 8px black"
