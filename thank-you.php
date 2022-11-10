@@ -55,7 +55,8 @@ $comments = trim(htmlspecialchars($_GET["comments"] ?? "", ENT_QUOTES));
         </section>
 
         <section class="thank-you-detail card m-2 p-2">
-            <a href="index.php?q=book.php" class="btn btn-primary col-sm-4 mx-auto" type="button">Book Another</a>
+            <a href="index.php?q=book.php" class="btn btn-primary col-sm-4 mx-auto" type="button"
+                title="click to book another trip">Book Another</a>
         </section>
     </div>
 </main>

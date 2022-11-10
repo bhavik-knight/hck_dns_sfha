@@ -165,10 +165,12 @@
                     <?php if (!$isFormComplete) { ?>
                     <!-- if form is not complete redirect to this page (book.php) -->
                     <input class=" visually-hidden" type="text" value="book.php" id="q" name="q" />
-                    <input type="submit" name="check" value="Validate" class="btn btn-primary w-auto mx-auto" />
+                    <input type="submit" name="check" value="Validate" class="btn btn-primary w-auto mx-auto"
+                        title="click to validate" />
                     <?php } else { ?>
                     <input class=" visually-hidden" type="text" value="thank-you.php" id="q" name="q" />
-                    <input type="submit" name="submit" value="Confirm" class="btn btn-primary w-auto mx-auto" />
+                    <input type="submit" name="submit" value="Confirm" class="btn btn-primary w-auto mx-auto"
+                        title="click to confirm the booking" />
                     <?php } ?>
                 </div>
             </form>

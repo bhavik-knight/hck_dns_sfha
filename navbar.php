@@ -16,8 +16,9 @@
         <div class=" navbar-dark-mode mx-1 my-0">
             <div class="form form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="dark-mode-switch"
-                    name="dark-mode-switch">
-                <label class="form-check-label navbar-text" for="dark-mode-switch">Dark Mode</label>
+                    name="dark-mode-switch" title="click to switch the mode">
+                <label class="form-check-label navbar-text" for="dark-mode-switch" title="click to switch the mode">Dark
+                    Mode</label>
             </div>
         </div>
 
