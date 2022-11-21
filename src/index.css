@@ -217,7 +217,9 @@ dd {
 }
 
 .book-heading,
+.adventure-heading,
 .book-form,
+.adventure-form,
 .book-ck-info {
     margin: 10px;
     padding: 10px;

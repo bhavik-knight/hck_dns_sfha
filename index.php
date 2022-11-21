@@ -16,7 +16,9 @@
         "navbar.php",
         "main.php",
         "menu.php",
-        "admin.php",
+        "admin-add.php",
+        "admin-confirm.php",
+        "all-adventures.php",
         "book.php",
         "thank-you.php",
         "footer.php",
@@ -25,7 +27,13 @@
 
     # check whether the particular page is set via get method
     # if true load set page to this page variable, otherwise set the main page
-    $page = isset($_GET["q"]) ? $_GET["q"] : "main.php";
+    $page = NULL;
+    if (isset($_POST["q"])) {
+        $page = $_POST["q"];
+    } else {
+        $page = isset($_GET["q"]) ? $_GET["q"] : "main.php";
+    }
+
 
     # if this page in our website, load that page, otherwise throw 404 error
     if (in_array($page, $pages)) {

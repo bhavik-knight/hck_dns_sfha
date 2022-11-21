@@ -44,12 +44,12 @@ $comments = trim(htmlspecialchars($_GET["comments"] ?? "", ENT_QUOTES));
             <hr>
             <div class="mx-2 p-2">
                 <p class="text-center">
-                    Congratulations, <b>
+                    Congratulations, <strong>
                         <?= $name ?>
-                    </b>. Your booking is succcessful!<br>
-                    We will contact you shortly through your email: <em><b>
+                    </strong>. Your booking is succcessful!<br>
+                    We will contact you shortly through your email: <em><strong>
                             <?= $email ?>
-                        </b></em>.
+                        </strong></em>.
                 </p>
             </div>
         </section>

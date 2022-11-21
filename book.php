@@ -7,7 +7,7 @@
             </div>
             <hr>
             <p class="card-body text-center">
-                Please fill the form below to book your trip.<br>
+                Please fill the form below to book your trip.
             </p>
         </section>
 
@@ -122,16 +122,24 @@
                     <div class="col-sm-10">
                         <select class="form-select" id="location" name="location" aria-label="select-location">
                             <!-- this first option is dummy -->
-                            <option selected disabled value="" <?php if ($location==="" ) { echo " selected" ; } ?>>
+                            <option selected disabled value="" <?php if ($location === "") {
+                                echo " selected";
+                            } ?>>
                                 Choose
                                 Location </option>
-                            <option value="Halifax" <?php if ($location==="Halifax" ) { echo " selected" ; } ?>>
+                            <option value="Halifax" <?php if ($location === "Halifax") {
+                                echo " selected";
+                            } ?>>
                                 Halifax
                             </option>
-                            <option value="Sydney" <?php if ($location==="Sydney" ) { echo " selected" ; } ?>>
+                            <option value="Sydney" <?php if ($location === "Sydney") {
+                                echo " selected";
+                            } ?>>
                                 Sydney
                             </option>
-                            <option value="Antigonish" <?php if ($location=="Antigonish" ) { echo " selected" ; } ?>>
+                            <option value="Antigonish" <?php if ($location == "Antigonish") {
+                                echo " selected";
+                            } ?>>
                                 Antigonish</option>
                         </select>
                     </div>

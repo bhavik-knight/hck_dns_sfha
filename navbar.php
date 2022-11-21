@@ -36,7 +36,7 @@
     <ul class="list-group">
         <a href="index.php?q=menu.php" class="list-group-items btn">Menu</a>
         <a href="index.php?q=book.php" class="list-group-items btn">Book Trip</a>
-        <a href="index.php?q=admin.php" class="list-group-items btn">Admin Login</a>
+        <a href="index.php?q=admin-add.php" class="list-group-items btn">Admin Login</a>
     </ul>
 </div>
 <!-- end of hamburger menu -->
