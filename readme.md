@@ -7,7 +7,7 @@
 
 ---
 
-## Phase 1 (https://bhavik-knight.github.io/hck_dns_sfha/)
+## Phase 1
 index / home page
 ### challenges:
 - style/css alignment-justify from scratch
