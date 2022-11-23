@@ -17,41 +17,6 @@
                 <h1 class="mx-auto">Upcoming Adventures</h1>
             </div>
 
-            <!-- display the adventures stored in the db -->
-            <?php
-            # select query to get all data from the db
-            $query = "SELECT * FROM $database.trial_adventures";
-            $result = $connect->query($query);
-
-            # if we find some results we need to display those, else show them appropriate message
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    # advanture: #x
-                    print("
-                        <div class='places card-body container-fluid mx-0 my-1 p-0'>
-                            <div id='places-sydney' class='card m-0 p-0'>
-                                <h3 class='card-title mx-auto my-2'>{$row["heading"]}</h3>
-                                <dl class='card-body row mx-auto p-2'>
-                                    <dt class='col-sm-6'>Date</dt>
-                                    <dd class='col-sm-6'>{$row["tripDate"]}</dd>
-                                    <dt class='col-sm-6'>Duration</dt>
-                                    <dd class='col-sm-6'>{$row["duration"]}</dd>
-                                </dl>
-                                <h5 class='card-title mx-auto my-2'>Summary</h5>
-                                <p class='card-text text-justify m-2'>{$row["summary"]}</p>
-                            </div>
-                        </div>
-                    ");
-                }
-            } else {
-                print("
-                    <div class='places card-body container-fluid mx-0 my-1 p-0'>
-                        <p class='text-center'>No adventures are planned yet, Please add some!</p>
-                    </div>
-                ");
-            }
-            ?>
-
             <!-- place: 1-->
             <div class="places card-body container-fluid mx-0 my-1 p-0">
                 <div id="places-halifax" class="card m-0 p-0">
@@ -115,6 +80,42 @@
                     </p>
                 </div>
             </div>
+
+            <!-- display the adventures stored in the db -->
+            <?php
+            # select query to get all data from the db
+            $query = "SELECT * FROM trial_dns.trial_adventures";
+            $result = $connect->query($query);
+
+            # if we find some results we need to display those, else show them appropriate message
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    # advanture: #x
+                    print("
+                        <div class='places card-body container-fluid mx-0 my-1 p-0'>
+                            <div id='places-sydney' class='card m-0 p-0'>
+                                <h3 class='card-title mx-auto my-2'>{$row["heading"]}</h3>
+                                <dl class='card-body row mx-auto p-2'>
+                                    <dt class='col-sm-6'>Date</dt>
+                                    <dd class='col-sm-6'>{$row["tripDate"]}</dd>
+                                    <dt class='col-sm-6'>Duration</dt>
+                                    <dd class='col-sm-6'>{$row["duration"]}</dd>
+                                </dl>
+                                <h5 class='card-title mx-auto my-2'>Summary</h5>
+                                <p class='card-text text-justify m-2'>{$row["summary"]}</p>
+                            </div>
+                        </div>
+                    ");
+                }
+            } else {
+                print("
+                    <div class='places card-body container-fluid mx-0 my-1 p-0'>
+                        <p class='text-center'>No adventures are planned yet, Please add some!</p>
+                    </div>
+                ");
+            }
+            ?>
+
         </section>
     </div>
 </main>

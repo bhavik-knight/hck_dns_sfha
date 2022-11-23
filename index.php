@@ -43,7 +43,6 @@
     }
     ?>
 
-
     <!-- start of footer -->
     <?php include "footer.php"; ?>
     <!-- end of footer -->

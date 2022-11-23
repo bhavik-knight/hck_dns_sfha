@@ -2,7 +2,7 @@
 # select query for all the location in the db
 $locationsQuery = "
     SELECT id, heading, tripDate
-    FROM {$database}.trial_dns.trial_adventures;
+    FROM trial_dns.trial_adventures;
 ";
 
 # get the results of the query
