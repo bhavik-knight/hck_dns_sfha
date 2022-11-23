@@ -1,3 +1,15 @@
+<?php
+# select query for all the location in the db
+$locationsQuery = "
+    SELECT id, heading, tripDate
+    FROM $database.trial_adventures
+";
+
+# get the results of the query
+$locationsResult = $connect->query($locationsQuery);
+?>
+
+
 <!-- start of html for the form -->
 <main class="main-container d-flex">
     <div class="page">
@@ -13,7 +25,6 @@
 
         <!-- to check the server-side validation -->
         <?php
-
         # to check the validation of the form
         $isFormComplete = false;
 
@@ -45,7 +56,7 @@
             }
 
             # check is location is selected from the given locations
-            if (!in_array($location, ["Halifax", "Sydney", "Antigonish"])) {
+            if (trim($location) === "") {
                 $isFormComplete = false;
                 array_push($errorMessages, "Where do you want to go?");
 
@@ -122,25 +133,26 @@
                     <div class="col-sm-10">
                         <select class="form-select" id="location" name="location" aria-label="select-location">
                             <!-- this first option is dummy -->
-                            <option selected disabled value="" <?php if ($location === "") {
-                                echo " selected";
-                            } ?>>
-                                Choose
-                                Location </option>
-                            <option value="Halifax" <?php if ($location === "Halifax") {
-                                echo " selected";
-                            } ?>>
-                                Halifax
+                            <option selected disabled <?php if ($location === "")
+                                echo " selected"; ?>>
+                                Choose Location
                             </option>
-                            <option value="Sydney" <?php if ($location === "Sydney") {
-                                echo " selected";
-                            } ?>>
-                                Sydney
+
+                            <!-- list all the location from the db -->
+                            <?php
+                            # check if we have any locations
+                            if ($locationsResult->num_rows) {
+                                # we have rows to iterate over
+                                while ($row = $locationsResult->fetch_assoc()) {
+                            ?>
+                            <option value=<?= $row["heading"] ?> <?php if ($location === $row["heading"])
+                                        echo " selected"; ?>>
+                                <?= $row["heading"] ?>
                             </option>
-                            <option value="Antigonish" <?php if ($location == "Antigonish") {
-                                echo " selected";
-                            } ?>>
-                                Antigonish</option>
+                            <?php
+                                }
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>
@@ -172,7 +184,7 @@
                 <div class="row">
                     <?php if (!$isFormComplete) { ?>
                     <!-- if form is not complete redirect to this page (book.php) -->
-                    <input class=" visually-hidden" type="text" value="book.php" id="q" name="q" />
+                    <input class="visually-hidden" type="text" value="book.php" id="q" name="q" />
                     <input type="submit" name="check" value="Validate" class="btn btn-primary w-auto mx-auto"
                         title="click to validate" />
                     <?php } else { ?>
@@ -184,13 +196,13 @@
             </form>
         </section>
 
-        <section class=" book-ck-info card m-2 p-2">
+        <section class="book-ck-info card m-2 p-2">
             <div class="card-title">
                 <h5 class="text-center">The Difference Between Canoe v Kayak</h5>
             </div>
             <div class="d-flex">
                 <!-- canoe info -->
-                <div class="canoe-info card m-0 p-1 w-50">
+                <div class="canoe-info card me-1 my-0 p-1 w-50">
                     <div class="row g-0">
                         <div class="col-sm-4 p-2 m-auto img-container">
                             <img src="images/canoe-logo.png" class="img-fluid rounded" alt="canoe image" />
@@ -206,7 +218,7 @@
                 </div>
 
                 <!-- kayak info -->
-                <div class="kayak-info card m-0 p-1 w-50">
+                <div class="kayak-info card ms-1 my-0 p-1 w-50">
                     <div class="row g-0">
                         <div class="col-sm-8 card-body">
                             <ul class="list-group list-group-flush rounded">

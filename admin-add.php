@@ -21,6 +21,9 @@
         $tripDate = trim(htmlspecialchars($_POST["trip-date"] ?? "", ENT_QUOTES));
         $duration = trim(htmlspecialchars($_POST["duration"] ?? "", ENT_QUOTES));
         $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
+        $defaultSummary = "
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        ";
 
         # check if form is valid or not
         if (isset($_POST["check"]) && $_POST["check"] === "Validate") {
@@ -127,10 +130,10 @@
                         <span class="text-danger"></span>
                     </label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="summary" name="summary" placeholder="Lorem ipsum..."><?php
-                        foreach (explode("\n", $summary) as $summary) {
-                            print($summary);
-                        } ?></textarea>
+                        <textarea class="form-control" id="summary" name="summary" placeholder="<?= $defaultSummary ?>"><?php
+                          foreach (explode("\n", $summary) as $summary) {
+                              print($summary);
+                          } ?></textarea>
                     </div>
                 </div>
 
