@@ -3,7 +3,7 @@
         <div id="contact-us-btn" class="m-1 p-0 flex-1">
             <button class="btn btn-danger disabled" type="button">contact us</button>
         </div>
-        <div class="copyright fs-4 m-1 my-0 p-0 flex-grow-0">
+        <div class="copyright text-white fs-4 m-1 my-0 p-0 flex-grow-0">
             &copy; Developed by Bhavik Bhagat for Digital Nova Scotia - WebDev : Blue
         </div>
         <div class="social m-1 p-0 flex-1">

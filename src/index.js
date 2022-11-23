@@ -74,6 +74,7 @@ function darkMode(isTrue) {
         $("nav").addClass("navbar-dark bg-dark border-white");
         $("#hamburger-menu").addClass("bg-dark");
         $("body").addClass("bg-dark text-white");
+        $(".text-over-img h1").css({ "color": "black" });
         $(".card").addClass("bg-dark text-white border-white");
         $("#events h3").css({ "color": "cyan" });
         $("dl").css({ "border": "1px solid white" })
@@ -98,6 +99,7 @@ function darkMode(isTrue) {
         $("nav").removeClass("navbar-dark bg-dark border-white");
         $("#hamburger-menu").removeClass("bg-dark");
         $("body").removeClass("bg-dark text-white");
+        $(".text-over-img h1").css({ "color": "white" });
         $(".card").removeClass("bg-dark text-white border-white");
         $("dl").css({ "border": "1px solid black" });
         $("hr").css({ "box-shadow": "2px 2px 8px black", "margin": "1em" })

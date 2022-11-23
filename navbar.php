@@ -17,7 +17,8 @@
             <div class="form form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="dark-mode-switch"
                     name="dark-mode-switch" title="click to switch the mode">
-                <label class="form-check-label navbar-text" for="dark-mode-switch" title="click to switch the mode">Dark
+                <label class="form-check-label navbar-text text" for="dark-mode-switch"
+                    title="click to switch the mode">Dark
                     Mode</label>
             </div>
         </div>
