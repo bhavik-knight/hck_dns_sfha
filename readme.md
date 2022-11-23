@@ -1,4 +1,4 @@
-# Halifax Canoe and Kayak
+# [Halifax Canoe and Kayak](https://dns-hck-bhavik.herokuapp.com/)
 
 ## A Project for Digital Nova Scotia : Skills for Hire
 ## Web-dev : Team Blue
@@ -30,7 +30,8 @@ book, thank-you page
 ---
 
 ## Phase 3
-admin-add, admin-confirm, all-adventure page, DB to add adventures
+admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
+hosting is done on Heroku: https://dns-hck-bhavik.herokuapp.com/
 
 - made db via phpmyadmin UI interface
 ### challenges:
@@ -40,7 +41,7 @@ admin-add, admin-confirm, all-adventure page, DB to add adventures
 - that above part is very difficult to debug if something is wrong when you cannot see errors
 - Object oriented vs Procedural way for CRUD: I chose Object oriented
 - tried PDO - to make life easier when we need to deal with different kind of db - didn't work due to some errors
-- still couldn't figure out hosting part
+- ~~still couldn't figure out hosting part$~~
 - still couldn't make dark-mode persist (solution could be cookies or session)
 
 ---
@@ -52,7 +53,7 @@ admin-add, admin-confirm, all-adventure page, DB to add adventures
 - Create a Menu page: this page will have register/login form for the users
 - Create another table for users -- users can book multiple adventures
 - Relational db devalopment - connect tables on keys, cardinality (one to one, one to many, many to many, etc.)
-- Host on some platform, create a domain name or something
+- ~~Host on some platform, create a domain name or something~~
 - Right now react is not used, the pages are modularized already, TODO react-js
 - Using react to create the components - will make UI improved in performance
 
