@@ -20,7 +20,7 @@ book, thank-you page
 
 - made the paddle-logo a home button for the website
 ### challenges:
-- lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubunty 18.04 - WSL
+- lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubuntu 18.04 - WSL
 - php
 - redirection to new page after validation
 - to make dark-mode persist on all pages
