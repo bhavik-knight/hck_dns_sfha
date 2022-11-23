@@ -19,7 +19,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
 
         # insert operation
         $adventureInsertQuery = "
-            INSERT INTO {$database}.trial_adventures (heading, tripDate, duration, summary)
+            INSERT INTO trial_adventures (heading, tripDate, duration, summary)
             VALUES (?, ?, ?, ?)
         ";
 
@@ -42,7 +42,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
             print("
                 <section class='validation card m-2 p-2'>
                 <div class='card-text alert alert-danger m-2' role='alert'>
-                    <strong>Error!</strong> . $query . <br> . $connect->error
+                    <strong>Error!</strong> . $adventureInsertQuery . <br> . $connect->connect_error
                 </div>
             </section>
             ");
