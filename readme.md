@@ -41,7 +41,7 @@ hosting is done on Heroku: https://dns-hck-bhavik.herokuapp.com/
 - that above part is very difficult to debug if something is wrong when you cannot see errors
 - Object oriented vs Procedural way for CRUD: I chose Object oriented
 - tried PDO - to make life easier when we need to deal with different kind of db - didn't work due to some errors
-- ~~still couldn't figure out hosting part$~~
+- ~~still couldn't figure out hosting part~~
 - still couldn't make dark-mode persist (solution could be cookies or session)
 
 ---
