@@ -22,6 +22,7 @@
         "book.php",
         "thank-you.php",
         "footer.php",
+        "connect-db.php",
         "ty.php"
     );
 
@@ -40,6 +41,9 @@
         include $page;
     }
     ?>
+
+    <!-- check db connection -->
+    <?php include "connect-db.php" ?>
 
     <!-- start of footer -->
     <?php include "footer.php"; ?>
