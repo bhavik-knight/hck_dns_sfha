@@ -7,6 +7,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
 
 <main class="main-container d-flex">
     <div class="page">
+        <!-- header section of this page -->
         <section class="thank-you-heading card m-2 p-2">
             <div class="card-body text-center">
                 <h2>Thank You</h2>
@@ -17,13 +18,13 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
         <?php
 
         # insert operation
-        $query = "
-            INSERT INTO trial_adventures (heading, tripDate, duration, summary)
+        $adventureInsertQuery = "
+            INSERT INTO {$database}.trial_adventures (heading, tripDate, duration, summary)
             VALUES (?, ?, ?, ?)
         ";
 
         # prepare the data to prevent sql injection
-        $tripInfo = $connect->prepare($query);
+        $tripInfo = $connect->prepare($adventureInsertQuery);
 
         # bind the parameters
         $tripInfo->bind_param("ssis", $adventureHeading, $tripDate, $duration, $summary);
@@ -52,6 +53,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
         $connect->close();
         ?>
 
+        <!-- section that displays the conent -->
         <section class="thank-you-detail card m-2 p-2">
             <div class="card-title m-2 pt-2 text-center">
                 <h4>Trip Details</h4>
@@ -93,6 +95,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
             </div>
         </section>
 
+        <!-- section add another trip of view all trips -->
         <section class="thank-you-detail card m-2 p-2">
             <a href="index.php?q=admin-add.php" class="btn btn-primary col-sm-4 mx-auto" type="button"
                 title="click to add another trip">Add Another</a>
@@ -102,7 +105,6 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
             <a href="index.php?q=all-adventures.php" class="btn btn-success col-sm-4 mx-auto" type="button"
                 title="click to add another trip">View All Adventures</a>
         </section>
-
 
     </div>
 </main>
