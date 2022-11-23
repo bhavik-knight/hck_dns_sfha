@@ -1,8 +1,8 @@
 <?php
 # select query for all the location in the db
 $locationsQuery = "
-    SELECT id, heading, tripDate
-    FROM trial_dns.trial_adventures;
+    SELECT adventure_id, adventure_heading, adventure_tripDate
+    FROM adventures;
 ";
 
 # get the results of the query
@@ -133,7 +133,8 @@ $locationsResult = $connect->query($locationsQuery);
                     <div class="col-sm-10">
                         <select class="form-select" id="location" name="location" aria-label="select-location">
                             <!-- this first option is dummy -->
-                            <option selected disabled <?php if ($location==="" ) echo " selected" ; ?>>
+                            <option selected disabled <?php if ($location === "")
+                                echo " selected"; ?>>
                                 Choose Location
                             </option>
 
@@ -144,9 +145,9 @@ $locationsResult = $connect->query($locationsQuery);
                                 # we have rows to iterate over
                                 while ($row = $locationsResult->fetch_assoc()) {
                             ?>
-                            <option value=<?=$row["heading"] ?> <?php if ($location === $row["heading"])
+                            <option value=<?= $row["adventure_heading"] ?> <?php if ($location === $row["adventure_heading"])
                                         echo " selected"; ?>>
-                                <?= $row["heading"] ?>
+                                <?= $row["adventure_heading"] ?>
                             </option>
                             <?php
                                 }

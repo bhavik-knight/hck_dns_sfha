@@ -18,10 +18,9 @@
             </div>
 
             <!-- place: 1-->
-            <div class="places card-body container-fluid mx-0 my-1 p-0">
+            <!-- <div class="places card-body container-fluid mx-0 my-1 p-0">
                 <div id="places-halifax" class="card m-0 p-0">
                     <h3 class="card-title mx-auto my-2">Halifax</h3>
-                    <!-- display as nice tabular list -->
                     <dl class="card-body row mx-auto p-2">
                         <dt class="col-sm-6">Date</dt>
                         <dd class="col-sm-6">2022-09-01</dd>
@@ -37,10 +36,10 @@
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- place: 2-->
-            <div class="places card-body container-fluid mx-0 my-1 p-0">
+            <!-- <div class="places card-body container-fluid mx-0 my-1 p-0">
                 <div id="places-sydney" class="card m-0 p-0">
                     <h3 class="card-title mx-auto my-2">Sydney</h3>
                     <dl class="card-body row mx-auto p-2">
@@ -58,10 +57,10 @@
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- place: 3-->
-            <div class="places card-body container-fluid mx-0 my-1 p-0">
+            <!-- <div class="places card-body container-fluid mx-0 my-1 p-0">
                 <div id="places-antigonish" class="card m-0 p-0">
                     <h3 class="card-title mx-auto my-2">Antigonish</h3>
                     <dl class="card-body row mx-auto p-2">
@@ -79,12 +78,12 @@
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- display the adventures stored in the db -->
             <?php
             # select query to get all data from the db
-            $query = "SELECT * FROM trial_dns.trial_adventures";
+            $query = "SELECT * FROM adventures";
             $result = $connect->query($query);
 
             # if we find some results we need to display those, else show them appropriate message
@@ -94,15 +93,15 @@
                     print("
                         <div class='places card-body container-fluid mx-0 my-1 p-0'>
                             <div id='places-sydney' class='card m-0 p-0'>
-                                <h3 class='card-title mx-auto my-2'>{$row["heading"]}</h3>
+                                <h3 class='card-title mx-auto my-2'>{$row["adventure_heading"]}</h3>
                                 <dl class='card-body row mx-auto p-2'>
                                     <dt class='col-sm-6'>Date</dt>
-                                    <dd class='col-sm-6'>{$row["tripDate"]}</dd>
+                                    <dd class='col-sm-6'>{$row["adventure_tripDate"]}</dd>
                                     <dt class='col-sm-6'>Duration</dt>
-                                    <dd class='col-sm-6'>{$row["duration"]}</dd>
+                                    <dd class='col-sm-6'>{$row["adventure_duration"]}</dd>
                                 </dl>
                                 <h5 class='card-title mx-auto my-2'>Summary</h5>
-                                <p class='card-text text-justify m-2'>{$row["summary"]}</p>
+                                <p class='card-text text-justify m-2'>{$row["adventure_summary"]}</p>
                             </div>
                         </div>
                     ");

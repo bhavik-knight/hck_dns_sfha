@@ -19,7 +19,7 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
 
         # insert operation
         $adventureInsertQuery = "
-            INSERT INTO trial_adventures (heading, tripDate, duration, summary)
+            INSERT INTO adventures (adventure_heading, adventure_tripDate, adventure_duration, adventure_summary)
             VALUES (?, ?, ?, ?)
         ";
 
