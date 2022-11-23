@@ -3,7 +3,6 @@ $adventureHeading = trim(htmlspecialchars($_POST["adventure-heading"] ?? "", ENT
 $tripDate = trim(htmlspecialchars($_POST["trip-date"] ?? "", ENT_QUOTES));
 $duration = trim(htmlspecialchars($_POST["duration"] ?? "", ENT_QUOTES));
 $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
-
 ?>
 
 <main class="main-container d-flex">
@@ -11,34 +10,46 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
         <section class="thank-you-heading card m-2 p-2">
             <div class="card-body text-center">
                 <h2>Thank You</h2>
-                <?php
-                if (!$connect->connect_error) {
-                    print("
-                        <div class='mt-1 pt-1'>
-                            <p class='text-center m-0 p-0'>Inserting Data</p>
-                        </div>
-                    ");
-                }
-                ?>
             </div>
         </section>
 
-        <!-- insert data into db
+        <!-- execute the query and see if inserted correctly -->
         <?php
-        # insert only if db is connected
-        if (!$connect->connect_error) {
-            # prepare the data to prevent sql injection
-            $tripInfo = $connect->prepare("
-                INSERT INTO trial_adventure (heading, duration, tripDate, summary)
-                VALUES (?, ?, ?, ?)
+
+        # insert operation
+        $query = "
+            INSERT INTO trial_adventures (heading, tripDate, duration, summary)
+            VALUES (?, ?, ?, ?)
+        ";
+
+        # prepare the data to prevent sql injection
+        $tripInfo = $connect->prepare($query);
+
+        # bind the parameters
+        $tripInfo->bind_param("ssis", $adventureHeading, $tripDate, $duration, $summary);
+
+        # execute the query and create a section to display the success or error message for the query insert
+        if ($tripInfo->execute() === TRUE) {
+            print("
+                <section class='validation card m-2 p-2'>
+                <div class='card-text alert alert-success m-2' role='alert'>
+                    The <strong>new</strong> adventure is added to the <em><strong>Database</strong></em>.
+                </div>
+            </section>
             ");
-
-            # bind the parameters
-            $tripInfo->bind_param("siss", $heading, $duration, $tripDate, $summary);
-
-            # execute the query
-            $tripInfo->execute();
+        } else {
+            print("
+                <section class='validation card m-2 p-2'>
+                <div class='card-text alert alert-danger m-2' role='alert'>
+                    <strong>Error!</strong> . $query . <br> . $connect->error
+                </div>
+            </section>
+            ");
         }
+
+        # close connection to db
+        $tripInfo->close();
+        $connect->close();
         ?>
 
         <section class="thank-you-detail card m-2 p-2">
@@ -71,11 +82,13 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
             <hr>
             <div class="mx-2 p-2">
                 <p class="text-center">
-                    Congratulations, Your trip to <strong><em>
+                    Congratulations, Trip to <strong><em>
                             <?= $adventureHeading ?>
                         </em></strong> for <strong>
                         <?= $duration ?>&nbsp;days
-                    </strong> is added successfully to the <strong><em>Database!</em></strong><br>
+                    </strong> on <strong>
+                        <?= $tripDate ?>
+                    </strong> is listed successfully!
                 </p>
             </div>
         </section>

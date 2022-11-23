@@ -18,16 +18,18 @@ if ($connect->connect_error) {
         </section>
     ");
 
-    # close the connection here
-    $connect->close();
+    # equivalent to exit
+    die();
 } else {
+    # connected to db
+    /*
     print("
-        <section class='validation card m-2 p-2'>
-            <div class='card-text alert alert-success m-2' role='alert'>
-                Connected to DB!
-            </div>
-        </section>
+    <section class='validation card m-2 p-2'>
+    <div class='card-text alert alert-success m-2' role='alert'>
+    Connected to DB!
+    </div>
+    </section>
     ");
-
+    */
 }
 ?>

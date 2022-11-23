@@ -38,12 +38,11 @@
 
     # if this page in our website, load that page, otherwise throw 404 error
     if (in_array($page, $pages)) {
+        include "connect-db.php";
         include $page;
     }
     ?>
 
-    <!-- check db connection -->
-    <?php include "connect-db.php" ?>
 
     <!-- start of footer -->
     <?php include "footer.php"; ?>

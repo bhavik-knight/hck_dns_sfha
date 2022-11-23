@@ -39,14 +39,20 @@
                 array_push($errorMessages, "Please provide the date of the trip");
             }
 
-            # check is duration is selected
+            # check is duration is selected: and must be a number in the range 1-999
             if (trim($duration) === "") {
                 $isFormComplete = false;
                 array_push($errorMessages, "How long is this trip?");
+            } else if (!is_numeric(trim($duration))) {
+                $isFormComplete = false;
+                array_push($errorMessages, "Trip duration must be a number");
+            } else if (trim($duration) < 1 || trim($duration > 999)) {
+                $isFormComplete = false;
+                array_push($errorMessages, "Trip duration must be in the range: 1-999");
             }
 
             # check if comment is given, this can be optional, so don't do anything
-            if (trim($comments) === "") {
+            if (trim($summary) === "") {
             }
 
             if (!$isFormComplete) {
