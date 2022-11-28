@@ -98,7 +98,7 @@
                                     <dt class='col-sm-6'>Date</dt>
                                     <dd class='col-sm-6'>{$row["adventure_tripDate"]}</dd>
                                     <dt class='col-sm-6'>Duration</dt>
-                                    <dd class='col-sm-6'>{$row["adventure_duration"]}</dd>
+                                    <dd class='col-sm-6'>{$row["adventure_duration"]}&nbsp;&nbsp;days</dd>
                                 </dl>
                                 <h5 class='card-title mx-auto my-2'>Summary</h5>
                                 <p class='card-text text-justify m-2'>{$row["adventure_summary"]}</p>
