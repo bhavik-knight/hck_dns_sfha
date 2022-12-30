@@ -1,9 +1,15 @@
 <?php
-# set the variables needed to connect to the db
-$servername = "us-cdbr-east-06.cleardb.net";
-$username = "b9b5c9775a88f2";
-$password = "031f22f8";
-$database = "heroku_52a475b9eb521fe";
+// # set the variables needed to connect to the db
+// $servername = "us-cdbr-east-06.cleardb.net";
+// $username = "b9b5c9775a88f2";
+// $password = "031f22f8";
+// $database = "heroku_52a475b9eb521fe";
+
+# aws-rds
+$servername = "ec2-15-222-238-235.ca-central-1.compute.amazonaws.com";
+$username = "root";
+$password = "Mysql_123";
+$database = "dns_sfha_hck_bk";
 
 // $servername = "localhost";
 // $username = "root";
