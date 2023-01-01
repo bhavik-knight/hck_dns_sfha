@@ -5,18 +5,18 @@
 // $password = "031f22f8";
 // $database = "heroku_52a475b9eb521fe";
 
-// # aws-rds
-// $servername = "dns-sfha-hck-bk.c2hxhq9147t7.ca-central-1.rds.amazonaws.com";
-// $username = "root";
-// $password = "Mysql_123";
-// $database = "dns-sfha-hck-bk";
-// $port = 3306;
-
-# local server
-$servername = "localhost";
+# aws-rds
+$servername = "dns-sfha-hck.c2hxhq9147t7.ca-central-1.rds.amazonaws.com";
 $username = "root";
-$password = "Mysql@123";
-$database = "dns_hck";
+$password = "Mysql_123";
+$database = "dns_sfha_hck";
+$port = 3306;
+
+// # local server
+// $servername = "localhost";
+// $username = "root";
+// $password = "Mysql@123";
+// $database = "dns_hck";
 
 # create the connection to the db
 $connect = new mysqli($servername, $username, $password, $database, $port);
