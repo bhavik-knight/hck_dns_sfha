@@ -31,7 +31,7 @@ book, thank-you page
 
 ## Phase 3
 admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
-hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~dns~ (heroku removed free tier support) <br>
+hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
 hosting is done on AWS: http://35.182.245.62/
 
 - made db via phpmyadmin UI interface
