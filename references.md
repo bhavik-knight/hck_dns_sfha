@@ -17,3 +17,5 @@
 9. [social media icons](https://icons.getbootstrap.com/icons/facebook/) for the footer which are clickable buttons.
 
 10. [Pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) for the extra styles. Like mouse hover over the buttons to change the color or highlight the border for that button, etc.
+
+11. create a proper directory structure to be able to host. [digital-ocean-virtual-host](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04/)
