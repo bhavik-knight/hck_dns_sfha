@@ -102,8 +102,8 @@ $summary = trim(htmlspecialchars($_POST["summary"] ?? "", ENT_QUOTES));
         </section>
 
         <section class="thank-you-detail card m-2 p-2">
-            <a href="index.php?q=all-adventures.php" class="btn btn-success col-sm-4 mx-auto" type="button"
-                title="click to add another trip">View All Adventures</a>
+            <a href="index.php" class="btn btn-success col-sm-4 mx-auto" type="button"
+                title="click to view all adventures">View All Adventures</a>
         </section>
 
     </div>
