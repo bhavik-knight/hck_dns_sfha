@@ -30,12 +30,27 @@ book, thank-you page
 ---
 
 ## Phase 3
-admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
-hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
-hosting is done on AWS: http://35.182.245.62/
-
+- admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
+- hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
+- hosting is done on AWS: http://35.182.245.62/
 - made db via phpmyadmin UI interface
-### challenges:
+---
+
+## Docker
+- containerized the app using Docker
+- retrsuctured webapp to make it suitable for containorization
+- the webapp is in php-apache container
+- the database is on the server which is another container
+- the container are communicating via `docker-compose.yml` file
+
+### To run this app on your local machine
+- download and install [docker-desktop](https://www.docker.com/products/docker-desktop/) <br>
+- pull the docker image using `docker pull b05k19/hck-dns-sfha` from docker-hub<br>
+- create the container using `docker run -d -p 2023:80 b05k19/hck-dns-sfha` from the docker-image<br>
+- run the container in the web-broser using `localhost:2023`<br>
+
+---
+### challenges
 - where to put db, table information
 - connect to db via php was relatively easy
 - after connection if something doesn't work UI breaks without showing errors on screen
@@ -61,4 +76,4 @@ hosting is done on AWS: http://35.182.245.62/
 ---
 
 ## Out of scope
-- Use Django to create the similar project: react for frontend, Django for backend, Postgre for db, host, docker, aws, testing
+- Use Django to create the similar project: react for frontend, Django for backend, Postgre for db, ~~host~~, ~~docker~~, ~~aws~~, testing
