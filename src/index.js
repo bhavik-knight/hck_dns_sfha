@@ -6,13 +6,21 @@ $(function () {
 
     // check switch for dark-mode, and pass it to the darkMode function
     darkMode($("#dark-mode-switch:checked").val());
+    const darkTheme = localStorage.getItem("dark-theme") ? localStorage.getItem("dark-theme") : null;
+    if (darkTheme) {
+        darkMode($("#dark-mode-switch:checked").val())
+    } else {
+        localStorage.setItem("dark-theme", $("#dark-mode-switch:checked").val());
+    }
 
     // dark mode switch
     $("#dark-mode-switch:checkbox").change(function () {
         if (this.checked) {
-            darkMode(true);
+            localStorage.setItem("dark-theme", true);
+            // darkMode(true);
         } else {
-            darkMode(false);
+            localStorage.setItem("dark-theme", false);
+            // darkMode(false);
         }
     });
 
