@@ -19,3 +19,7 @@
 10. [Pseudo elements](https://www.w3schools.com/css/css_pseudo_elements.asp) for the extra styles. Like mouse hover over the buttons to change the color or highlight the border for that button, etc.
 
 11. create a proper directory structure to be able to host. [digital-ocean-virtual-host](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04/)
+
+12. containerize the PHP-MySQL webapp [Joseph Chege - Guide](https://www.section.io/engineering-education/dockerized-php-apache-and-mysql-container-development-environment/)
+
+13. Docker basics for PHP webapp [Durgesh - Youtube Video](https://www.youtube.com/watch?v=nK3a2P1JOOw&list=PLCakfctNSHkGYdA82WDUKF3WGyONpGiEw)
