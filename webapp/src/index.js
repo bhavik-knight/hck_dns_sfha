@@ -4,37 +4,41 @@ $(function () {
         window.open("index.php", "_blank noreferrer noopener");
     });
 
-    // check switch for dark-mode, and pass it to the darkMode function
-    darkMode($("#dark-mode-switch:checked").val());
-    const darkTheme = localStorage.getItem("dark-theme") ? localStorage.getItem("dark-theme") : null;
-    if (darkTheme) {
-        darkMode($("#dark-mode-switch:checked").val())
+    // check switch for dark-mode when DOM is loaded, and pass it to the darkMode function
+    // darkMode($("#dark-mode-switch:checked").val());
+    if (localStorage.getItem("dark-theme")) {
+        if (localStorage.getItem("dark-theme") === "true") {
+            darkMode(true);
+            $("#dark-mode-switch")[0]["checked"] = true;
+        } else {
+            darkMode(false);
+            $("#dark-mode-switch")[0]["checked"] = false;
+        }
     } else {
         localStorage.setItem("dark-theme", $("#dark-mode-switch:checked").val());
     }
 
-    // dark mode switch
+    // dark mode switch - when user click this manually
     $("#dark-mode-switch:checkbox").change(function () {
         if (this.checked) {
+            darkMode(true);
             localStorage.setItem("dark-theme", true);
-            // darkMode(true);
         } else {
+            darkMode(false);
             localStorage.setItem("dark-theme", false);
-            // darkMode(false);
         }
     });
 
-
     // turn events places heading green
-    $("#events h3").css({ "color": "green" });
+    // $("#events h3").css({ "color": "green" });
 
     // text-shadow to make them pop up
-    $("h1, h2, h3, h4, h5, h6")
-        .css({
-            "text-shadow": "1px 1px 4px black",
-            "margin": 0,
-            "padding": 0
-        });
+    // $("h1, h2, h3, h4, h5, h6")
+    //     .css({
+    //         "text-shadow": "1px 1px 4px black",
+    //         "margin": 0,
+    //         "padding": 0
+    //     });
 
     // remove margin padding from elements
     $("#events dl, dt").css({ "margin": 0, "padding": 0 })
@@ -87,16 +91,16 @@ function darkMode(isTrue) {
         $("#events h3").css({ "color": "cyan" });
         $("dl").css({ "border": "1px solid white" })
         $("hr").css({ "box-shadow": "2px 2px 16px white", "margin": "1em" })
-        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6").addClass("border-white");
-        $("header, footer").css({
-            "box-shadow": "1px 1px 4px white"
-        })
         $("h1, h2, h3, h4, h5, h6, .navbar-text")
             .css({
                 "text-shadow": "1px 1px 4px white",
                 "padding": 0,
                 "margin": 0
             });
+        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6").addClass("border-white");
+        $("header, footer").css({
+            "box-shadow": "1px 1px 4px white"
+        })
         $("#hamburger-menu, .bg-img-container, .page")
             .css({
                 "border": "2px solid white",
@@ -109,20 +113,20 @@ function darkMode(isTrue) {
         $("body").removeClass("bg-dark text-white");
         $(".text-over-img h1").css({ "color": "white" });
         $(".card").removeClass("bg-dark text-white border-white");
+        $("#events h3").css({ "color": "green" });
         $("dl").css({ "border": "1px solid black" });
         $("hr").css({ "box-shadow": "2px 2px 8px black", "margin": "1em" })
-        $("#events h3").css({ "color": "green" });
-        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6")
-            .removeClass("border-white")
-            .css({
-                "border-bottom": "2px solid black",
-                "width": "fit-content"
-            });
         $("h1, h2, h3, h4, h5, h6, .navbar-text")
             .css({
                 "text-shadow": "1px 1px 4px black",
                 "padding": 0,
                 "margin": 0
+            });
+        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6")
+            .removeClass("border-white")
+            .css({
+                "border-bottom": "2px solid black",
+                "width": "fit-content"
             });
         $("#hamburger-menu, .bg-img-container, .page")
             .css({

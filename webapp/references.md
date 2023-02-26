@@ -23,3 +23,5 @@
 12. containerize the PHP-MySQL webapp [Joseph Chege - Guide](https://www.section.io/engineering-education/dockerized-php-apache-and-mysql-container-development-environment/)
 
 13. Docker basics for PHP webapp [Durgesh - Youtube Video](https://www.youtube.com/watch?v=nK3a2P1JOOw&list=PLCakfctNSHkGYdA82WDUKF3WGyONpGiEw)
+
+14. Persistant Dark Mode over all pages - localStorage [Ananya Neogi's Article](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)
