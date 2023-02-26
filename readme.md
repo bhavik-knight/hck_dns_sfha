@@ -30,12 +30,27 @@ book, thank-you page
 ---
 
 ## Phase 3
-admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
-hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
-hosting is done on AWS: http://35.182.245.62/
-
+- admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
+- hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
+- hosting is done on AWS: http://35.182.245.62/
 - made db via phpmyadmin UI interface
-### challenges:
+---
+
+## Docker
+- containerized the app using Docker
+- retrsuctured webapp to make it suitable for containorization
+- the webapp is in php-apache container
+- the database is on the server which is another container
+- the container are communicating via `docker-compose.yml` file
+
+### To run this app on your local machine
+- download and install [docker-desktop](https://www.docker.com/products/docker-desktop/) <br>
+- pull the docker image using `docker pull b05k19/hck-dns-sfha` from docker-hub<br>
+- create the container using `docker run -d -p 2023:80 b05k19/hck-dns-sfha` from the docker-image<br>
+- run the container in the web-broser using `localhost:2023`<br>
+
+---
+### challenges
 - where to put db, table information
 - connect to db via php was relatively easy
 - after connection if something doesn't work UI breaks without showing errors on screen
@@ -43,13 +58,13 @@ hosting is done on AWS: http://35.182.245.62/
 - Object oriented vs Procedural way for CRUD: I chose Object oriented
 - tried PDO - to make life easier when we need to deal with different kind of db - didn't work due to some errors
 - ~~still couldn't figure out hosting part~~
-- still couldn't make dark-mode persist (solution could be cookies or session)
+- ~~still couldn't make dark-mode persist (solution could be cookies or session)~~
 
 ---
 
 ## Future Scope
 - Make form validation button disappear, and make submit button to do both parts (if valid -> submit, if not -> reload form)
-- Make dark-mode persist (learn cookies, session use, this may help in the 1st problem as well)
+- ~~Make dark-mode persist (learn cookies, session use, this may help in the 1st problem as well)~~
 - Create a booking table -- stores all the bookings
 - Create a Menu page: this page will have register/login form for the users
 - Create another table for users -- users can book multiple adventures
@@ -61,4 +76,4 @@ hosting is done on AWS: http://35.182.245.62/
 ---
 
 ## Out of scope
-- Use Django to create the similar project: react for frontend, Django for backend, Postgre for db, host, docker, aws, testing
+- Use Django to create the similar project: ReactJS for frontend, Django for backend, PostgreSQL for db, ~~host~~, ~~docker~~, ~~aws~~, testing
