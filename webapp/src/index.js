@@ -30,15 +30,15 @@ $(function () {
     });
 
     // turn events places heading green
-    // $("#events h3").css({ "color": "green" });
+    $("#events h3").css({ "color": "green" });
 
     // text-shadow to make them pop up
-    // $("h1, h2, h3, h4, h5, h6")
-    //     .css({
-    //         "text-shadow": "1px 1px 4px black",
-    //         "margin": 0,
-    //         "padding": 0
-    //     });
+    $("h1, h2, h3, h4, h5, h6")
+        .css({
+            "text-shadow": "1px 1px 4px black",
+            "margin": 0,
+            "padding": 0
+        });
 
     // remove margin padding from elements
     $("#events dl, dt").css({ "margin": 0, "padding": 0 })
