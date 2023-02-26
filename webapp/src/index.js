@@ -33,7 +33,9 @@ $(function () {
     $("#events h3").css({ "color": "green" });
 
     // text-shadow to make them pop up
-    $("h1, h2, h3, h4, h5, h6")
+    // h1 is not included here on purpose to fix the issue of text-over-image h1 default black shadow
+    // in white theme it's okay, but in the black theme, shadow by default should be white
+    $("h2, h3, h4, h5, h6")
         .css({
             "text-shadow": "1px 1px 4px black",
             "margin": 0,
