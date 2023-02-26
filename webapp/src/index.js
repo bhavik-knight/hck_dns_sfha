@@ -30,17 +30,17 @@ $(function () {
     });
 
     // turn events places heading green
-    $("#events h3").css({ "color": "green" });
+    // $("#events h3").css({ "color": "green" });
 
     // text-shadow to make them pop up
     // h1 is not included here on purpose to fix the issue of text-over-image h1 default black shadow
     // in white theme it's okay, but in the black theme, shadow by default should be white
-    $("h2, h3, h4, h5, h6")
-        .css({
-            "text-shadow": "1px 1px 4px black",
-            "margin": 0,
-            "padding": 0
-        });
+    // $("h1, h2, h3, h4, h5, h6")
+    //     .css({
+    //         "text-shadow": "1px 1px 4px black",
+    //         "margin": 0,
+    //         "padding": 0
+    //     });
 
     // remove margin padding from elements
     $("#events dl, dt").css({ "margin": 0, "padding": 0 })
@@ -93,7 +93,12 @@ function darkMode(isTrue) {
         $("#events h3").css({ "color": "cyan" });
         $("dl").css({ "border": "1px solid white" })
         $("hr").css({ "box-shadow": "2px 2px 16px white", "margin": "1em" })
-        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6").addClass("border-white");
+        $("#events h1, #events h2, #events h3, #events h4, #events h5, #events h6")
+            .addClass("border-white")
+            .css({
+                "border-bottom": "2px solid white",
+                "width": "fit-content"
+            });
         $("h1, h2, h3, h4, h5, h6, .navbar-text")
             .css({
                 "text-shadow": "1px 1px 4px white",
