@@ -121,6 +121,7 @@ footer .social .btn:hover {
 /* start of main styles */
 dl {
     border-radius: 1em;
+    border: 2px solid black;
 }
 
 dt {
@@ -173,6 +174,7 @@ dd {
     flex-direction: column;
     flex-wrap: wrap;
     align-self: center;
+    color: white;
 }
 
 .bg-img-container h1 {
@@ -180,9 +182,24 @@ dd {
     text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 4px black;
+}
+
 #events {
     border-radius: 1em;
     box-shadow: 2px 2px 8px black;
+}
+
+#events h3 {
+    color: green;
 }
 
 #events h1,
@@ -192,6 +209,7 @@ dd {
 #events h5,
 #events h6 {
     border-bottom: 2px solid black;
+    width: fit-content;
 }
 
 .card {
