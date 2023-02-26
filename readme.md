@@ -58,13 +58,13 @@ book, thank-you page
 - Object oriented vs Procedural way for CRUD: I chose Object oriented
 - tried PDO - to make life easier when we need to deal with different kind of db - didn't work due to some errors
 - ~~still couldn't figure out hosting part~~
-- still couldn't make dark-mode persist (solution could be cookies or session)
+- ~~still couldn't make dark-mode persist (solution could be cookies or session)~~
 
 ---
 
 ## Future Scope
 - Make form validation button disappear, and make submit button to do both parts (if valid -> submit, if not -> reload form)
-- Make dark-mode persist (learn cookies, session use, this may help in the 1st problem as well)
+- ~~Make dark-mode persist (learn cookies, session use, this may help in the 1st problem as well)~~
 - Create a booking table -- stores all the bookings
 - Create a Menu page: this page will have register/login form for the users
 - Create another table for users -- users can book multiple adventures
@@ -76,4 +76,4 @@ book, thank-you page
 ---
 
 ## Out of scope
-- Use Django to create the similar project: react for frontend, Django for backend, Postgre for db, ~~host~~, ~~docker~~, ~~aws~~, testing
+- Use Django to create the similar project: ReactJS for frontend, Django for backend, PostgreSQL for db, ~~host~~, ~~docker~~, ~~aws~~, testing
