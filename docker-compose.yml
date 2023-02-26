@@ -1,0 +1,32 @@
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./webapp:/var/www/html/
+    ports:
+      - 8000:80
+    depends_on:
+      - database
+
+  database:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Mysql_123
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: us-cdbr-east-06.cleardb.net
+      PMA_USER: b9b5c9775a88f2
+      PMA_PASSWORD: 031f22f8
+      PMA_PORT: 3306
+    depends_on:
+      - database
