@@ -1,10 +1,10 @@
 <?php
 # set the variables needed to connect to the db
-// $servername = "us-cdbr-east-06.cleardb.net";
-// $username = "b9b5c9775a88f2";
-// $password = "031f22f8";
-// $database = "heroku_52a475b9eb521fe";
-// $port = 3306;
+$servername = "us-cdbr-east-06.cleardb.net";
+$username = "b9b5c9775a88f2";
+$password = "031f22f8";
+$database = "heroku_52a475b9eb521fe";
+$port = 3306;
 
 // # aws-rds
 // $servername = "dns-sfha-hck.c2hxhq9147t7.ca-central-1.rds.amazonaws.com";
