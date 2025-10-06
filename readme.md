@@ -76,4 +76,4 @@ Book, Thank-you page
 ---
 
 ## Out of scope
-- Use Django to create the similar project: ReactJS for frontend, Django for backend, PostgreSQL for db, ~~host~~, ~~docker~~, ~~aws~~, testing
+- Use Django to create a similar project: ReactJS for frontend, Django for backend, PostgreSQL for db, ~~host~~, ~~docker~~, ~~aws~~, testing
