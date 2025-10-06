@@ -10,19 +10,19 @@
 ## Phase 1
 index / home page
 ### challenges:
-- style/css alignment-justify from scratch
-- jquery to combined with css for dark-mode
-- footer is the trickiest to keep it at the bottom
+- Style/css alignment-justify from scratch
+- JQuery to combine with CSS for dark-mode
+- The footer is the trickiest to keep at the bottom
 ---
 
 ## Phase 2
 book, thank-you page
 
-- made the paddle-logo a home button for the website
+- made the paddle logo a home button for the website
 ### challenges:
 - lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubuntu 18.04 - WSL
 - php
-- redirection to new page after validation
+- redirection to a new page after validation
 - to make dark-mode persist on all pages
 - to partially fill the form from the thank-you page for another trip
 - couldn't figure out the hosting part
@@ -30,48 +30,48 @@ book, thank-you page
 ---
 
 ## Phase 3
-- admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
-- hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
-- hosting is done on AWS: http://35.182.245.62/
-- made db via phpmyadmin UI interface
+- Admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
+- Hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
+- Hosting is done on AWS: ~~http://35.182.245.62/~~ (Ran out of AWS Free Credits)
+- <ade db via phpmyadmin UI interface
 ---
 
 ## Docker
-- containerized the app using Docker
-- retrsuctured webapp to make it suitable for containorization
-- the webapp is in php-apache container
-- the database is on the server which is another container
-- the container are communicating via `docker-compose.yml` file
+- Containerized the app using Docker
+- Restructured webapp to make it suitable for containerization
+- The webapp is in a PHP-Apache container
+- The database is on the server, which is another container
+- The containers are communicating via the `docker-compose.yml` file
 
 ### To run this app on your local machine
 - download and install [docker-desktop](https://www.docker.com/products/docker-desktop/) <br>
-- pull the docker image using `docker pull b05k19/hck-dns-sfha` from docker-hub<br>
+- pull the Docker image using `docker pull b05k19/hck-dns-sfha` from Docker Hub <br>
 - create the container using `docker run -d -p 2023:80 b05k19/hck-dns-sfha` from the docker-image<br>
-- run the container in the web-broser using `localhost:2023`<br>
+- run the container in the web browser using `localhost:2023`<br>
 
 ---
 ### challenges
-- where to put db, table information
-- connect to db via php was relatively easy
-- after connection if something doesn't work UI breaks without showing errors on screen
-- that above part is very difficult to debug if something is wrong when you cannot see errors
-- Object oriented vs Procedural way for CRUD: I chose Object oriented
-- tried PDO - to make life easier when we need to deal with different kind of db - didn't work due to some errors
-- ~~still couldn't figure out hosting part~~
+- Where to put db, table information
+- Connecting to db via PHP was relatively easy
+- After connection, if something doesn't work UI breaks without showing errors on screen
+- The above part is difficult to debug if something is wrong, as you cannot see errors
+- Object-oriented vs Procedural way for CRUD: I chose object-oriented
+- tried PDO - to make life easier when we need to deal with different kinds of DB - didn't work due to some errors
+- ~~still couldn't figure out the hosting part~~
 - ~~still couldn't make dark-mode persist (solution could be cookies or session)~~
 
 ---
 
 ## Future Scope
-- Make form validation button disappear, and make submit button to do both parts (if valid -> submit, if not -> reload form)
+- Make the form validation button disappear, and make the submit button do both parts (if valid -> submit, if not -> reload form)
 - ~~Make dark-mode persist (learn cookies, session use, this may help in the 1st problem as well)~~
 - Create a booking table -- stores all the bookings
-- Create a Menu page: this page will have register/login form for the users
+- Create a Menu page: this page will have a register/login form for the users
 - Create another table for users -- users can book multiple adventures
-- Relational db devalopment - connect tables on keys, cardinality (one to one, one to many, many to many, etc.)
+- Relational DB development - connect tables on keys, cardinality (one to one, one to many, many to many, etc.)
 - ~~Host on some platform, create a domain name or something~~
-- Right now react is not used, the pages are modularized already, TODO react-js
-- Using react to create the components - will make UI improved in performance
+- Right now, React is not used; the pages are modularized already, TODO react-js
+- Using React to create the components - will improve UI Performance
 
 ---
 
