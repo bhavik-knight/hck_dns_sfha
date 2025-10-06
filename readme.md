@@ -1,14 +1,14 @@
 # [Halifax Canoe and Kayak](http://35.182.245.62/)
 
-## A Project for Digital Nova Scotia : Skills for Hire
-## Web-dev : Team Blue
+## A Project for Digital Nova Scotia: Skills for Hire
+## Web-dev: Team Blue
 
 ## Developed by: Bhavik Bhagat (email: bhavik.bhagat.jobs@gmail.com)
 
 ---
 
 ## Phase 1
-index / home page
+Index/Home page
 ### challenges:
 - Style/css alignment-justify from scratch
 - JQuery to combine with CSS for dark-mode
@@ -16,16 +16,16 @@ index / home page
 ---
 
 ## Phase 2
-book, thank-you page
+Book, Thank-you page
 
 - made the paddle logo a home button for the website
-### challenges:
-- lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubuntu 18.04 - WSL
-- php
-- redirection to a new page after validation
-- to make dark-mode persist on all pages
-- to partially fill the form from the thank-you page for another trip
-- couldn't figure out the hosting part
+  ### challenges:
+  - lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubuntu 18.04 - WSL
+  - php
+  - redirection to a new page after validation
+  - to make dark-mode persist on all pages
+  - to partially fill the form from the thank-you page for another trip
+  - couldn't figure out the hosting part
 
 ---
 
@@ -42,15 +42,15 @@ book, thank-you page
 - The webapp is in a PHP-Apache container
 - The database is on the server, which is another container
 - The containers are communicating via the `docker-compose.yml` file
-
-### To run this app on your local machine
-- download and install [docker-desktop](https://www.docker.com/products/docker-desktop/) <br>
-- pull the Docker image using `docker pull b05k19/hck-dns-sfha` from Docker Hub <br>
-- create the container using `docker run -d -p 2023:80 b05k19/hck-dns-sfha` from the docker-image<br>
-- run the container in the web browser using `localhost:2023`<br>
-
+  
+  ### To run this app on your local machine
+  - download and install [docker-desktop](https://www.docker.com/products/docker-desktop/) <br>
+  - pull the Docker image using `docker pull b05k19/hck-dns-sfha` from Docker Hub <br>
+  - create the container using `docker run -d -p 2023:80 b05k19/hck-dns-sfha` from the docker-image<br>
+  - run the container in the web browser using `localhost:2023`<br>
 ---
-### challenges
+
+## Challenges
 - Where to put db, table information
 - Connecting to db via PHP was relatively easy
 - After connection, if something doesn't work UI breaks without showing errors on screen
