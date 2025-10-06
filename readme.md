@@ -33,7 +33,7 @@ book, thank-you page
 - Admin-add, admin-confirm, all-adventure page, DB to add adventures<br>
 - Hosting is done on Heroku: ~~https://dns-hck-bhavik.herokuapp.com/~~ (heroku removed free tier support) <br>
 - Hosting is done on AWS: ~~http://35.182.245.62/~~ (Ran out of AWS Free Credits)
-- Made db via phpmyadmin UI interface
+- Created the DB via the phpMyAdmin UI interface
 ---
 
 ## Docker
