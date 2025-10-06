@@ -9,8 +9,8 @@
 
 ## Phase 1
 Index/Home page
-### challenges:
-- Style/css alignment-justify from scratch
+### Challenges:
+- Style/CSS alignment-justify from scratch
 - JQuery to combine with CSS for dark-mode
 - The footer is the trickiest to keep at the bottom
 ---
@@ -19,7 +19,7 @@ Index/Home page
 Book, Thank-you page
 
 - made the paddle logo a home button for the website
-  ### challenges:
+  ### Challenges:
   - lampstack was very difficult to set up for Ubuntu 20.04 - WSL, switched back to Ubuntu 18.04 - WSL
   - php
   - redirection to a new page after validation
